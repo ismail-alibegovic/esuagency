@@ -132,7 +132,6 @@ export type Dictionary = {
     cta: string;
     columns: { title: string; links: { label: string; href: string }[] }[];
     rights: string;
-    credits: string;
     top: string;
   };
 };
@@ -635,7 +634,6 @@ const bs: Dictionary = {
       },
     ],
     rights: "Sva prava zadržana.",
-    credits: "Fotografije: Unsplash (Unsplash licenca)",
     top: "Na vrh",
   },
 };
@@ -1135,7 +1133,6 @@ const en: Dictionary = {
       },
     ],
     rights: "All rights reserved.",
-    credits: "Photography: Unsplash (Unsplash License)",
     top: "Back to top",
   },
 };
