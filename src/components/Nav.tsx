@@ -29,7 +29,7 @@ export default function Nav({ t, locale, contactId }: { t: Dictionary["nav"]; lo
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:pt-6">
       <nav
-        aria-label="Primary"
+        aria-label={t.aria}
         className={`mx-auto flex h-14 max-w-[1000px] items-center justify-between rounded-full border pl-5 pr-2 backdrop-blur-xl transition-[background-color,border-color,box-shadow] duration-500 sm:h-[60px] sm:pl-6 ${
           scrolled || open
             ? "border-white/10 bg-black/65 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.6)]"

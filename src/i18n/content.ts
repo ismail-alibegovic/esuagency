@@ -37,6 +37,7 @@ export type Dictionary = {
     menu: string;
     close: string;
     langLabel: string;
+    aria: string;
   };
   hero: { title: string; text: string; primary: string; secondary: string; imageAlt: string };
   trust: { label: string; title: string; items: string[] };
@@ -167,6 +168,7 @@ const bs: Dictionary = {
     menu: "Otvori meni",
     close: "Zatvori meni",
     langLabel: "Jezik",
+    aria: "Glavna navigacija",
   },
   hero: {
     title: "Ulažemo u potencijal. Stvaramo vrijednost.",
@@ -176,7 +178,7 @@ const bs: Dictionary = {
     imageAlt: "Moderna zgrada s fasadom od vertikalnih lamela pod plavim nebom",
   },
   trust: {
-    label: "Build your world with us.",
+    label: "Izgradite svoj svijet s nama.",
     title: "Novi dom. Prostor za posao. Prilika za ulaganje.",
     items: ["Ulaganje", "Prodaja", "Saradnja", "Sarajevo, BiH"],
   },
@@ -245,7 +247,7 @@ const bs: Dictionary = {
             text: "Nekretnine posebnog karaktera za zahtjevnije kupce.",
             image: `${IMG}/home-villas.jpg`,
             alt: "Bijela moderna vila pod plavim nebom",
-            tags: ["Premium", "Privatnost"],
+            tags: ["Ekskluzivno", "Privatnost"],
           },
         ],
       },
@@ -603,7 +605,7 @@ const bs: Dictionary = {
     },
   },
   footer: {
-    tagline: "Build your world with us.",
+    tagline: "Izgradite svoj svijet s nama.",
     text: "Kompanija za investicije u nekretnine. Ulažemo u potencijal i stvaramo vrijednost — za kupce, investitore i partnere.",
     cta: "Kontaktirajte nas",
     columns: [
@@ -666,6 +668,7 @@ const en: Dictionary = {
     menu: "Open menu",
     close: "Close menu",
     langLabel: "Language",
+    aria: "Main navigation",
   },
   hero: {
     title: "We invest in potential. We create value.",
@@ -677,7 +680,7 @@ const en: Dictionary = {
   trust: {
     label: "Build your world with us.",
     title: "A new home. A place for business. An opportunity to invest.",
-    items: ["Investment", "Sales", "Partnerships", "Sarajevo, BiH"],
+    items: ["Investment", "Sales", "Partnerships", "Sarajevo, B&H"],
   },
   expertise: {
     eyebrow: "What we do",
