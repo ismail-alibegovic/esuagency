@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import LogoLink from "./LogoLink";
 import { useEffect, useState } from "react";
 import type { Dictionary, Locale } from "@/i18n/content";
 import { ArrowUpRight, Close, Menu } from "./icons";
@@ -36,9 +36,9 @@ export default function Nav({ t, locale, contactId }: { t: Dictionary["nav"]; lo
             : "border-white/15 bg-white/[0.08]"
         }`}
       >
-        <Link href={home} className="flex shrink-0 items-center" aria-label="ESU Agency">
+        <LogoLink href={home} className="flex shrink-0 items-center">
           <Image src="/brand/logo-white.png" alt="ESU Agency" width={394} height={59} priority className="h-[22px] w-auto sm:h-6" />
-        </Link>
+        </LogoLink>
 
         <ul className="hidden items-center gap-1 lg:flex">
           {t.links.map((l) => (

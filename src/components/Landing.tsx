@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import LogoLink from "./LogoLink";
 import type { ReactNode } from "react";
 import { company, dictionaries, sectionIds, type Locale } from "@/i18n/content";
 import AudienceSwitcher from "./AudienceSwitcher";
@@ -92,7 +92,7 @@ export default function Landing({ locale }: { locale: Locale }) {
     <>
       <a
         href="#main"
-        className="sr-only z-[100] rounded-full bg-white px-4 py-2 text-black focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+        className="sr-only z-[100] rounded-full bg-white px-4 py-2 text-black focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4"
       >
         {t.skip}
       </a>
@@ -417,9 +417,9 @@ export default function Landing({ locale }: { locale: Locale }) {
       <footer className="border-t border-white/[0.08] bg-black">
         <div className={`${container} grid gap-14 py-16 sm:py-20 lg:grid-cols-[1.2fr_2fr]`}>
           <div>
-            <Link href={home} aria-label="ESU Agency">
+            <LogoLink href={home}>
               <Image src="/brand/logo-white.png" alt="ESU Agency" width={394} height={59} className="h-9 w-auto sm:h-11" />
-            </Link>
+            </LogoLink>
             <p className="font-display mt-6 text-[22px] font-medium">{t.footer.tagline}</p>
             <p className="mt-3 max-w-sm text-[13.5px] leading-relaxed text-white/55">{t.footer.text}</p>
             <div className="mt-7 flex flex-wrap gap-3">
