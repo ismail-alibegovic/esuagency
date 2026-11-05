@@ -470,6 +470,7 @@ export default function Landing({ locale }: { locale: Locale }) {
               © {new Date().getFullYear()} {company.name} {t.footer.rights}
             </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+              <span className="text-white/25">{t.footer.madeBy}</span>
               <a href="#main" className="inline-flex items-center gap-1.5 hover:text-white">
                 {t.footer.top} <ArrowUp className="h-3.5 w-3.5" />
               </a>
