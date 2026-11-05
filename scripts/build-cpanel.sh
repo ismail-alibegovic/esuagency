@@ -16,6 +16,7 @@ NEXT_PUBLIC_CONTACT_ENDPOINT=/contact.php npx next build
 
 cp cpanel/contact.php out/contact.php
 cp cpanel/htaccess out/.htaccess
+rm -f out/images/CREDITS.md   # photo sources stay in the repo, not on the public site
 
 # Web server must be able to read everything: files 644, folders 755 (some source files were 600)
 find out -type d -exec chmod 755 {} +

@@ -1,6 +1,9 @@
 # ESU Agency — Apache settings for cPanel hosting
 DirectoryIndex index.html
-Options -Indexes
+# Never list folder contents (written without "Options" so it cannot cause a 500 on strict hosts)
+<IfModule mod_autoindex.c>
+  IndexIgnore *
+</IfModule>
 
 # Uncomment after SSL (AutoSSL / Let's Encrypt) is active for the domain:
 # RewriteEngine On
