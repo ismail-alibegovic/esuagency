@@ -637,7 +637,7 @@ const bs: Dictionary = {
       },
     ],
     rights: "Sva prava zadržana.",
-    madeBy: "Izradio Ismail Alibegovic",
+    madeBy: "Made by Ismail Alibegovic",
     top: "Na vrh",
   },
 };
