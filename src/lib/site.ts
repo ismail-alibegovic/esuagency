@@ -11,7 +11,8 @@ function resolveSiteUrl() {
 
 export const siteUrl = resolveSiteUrl();
 
-export const localePath: Record<Locale, string> = { bs: "/", en: "/en" };
+const slash = process.env.NEXT_PUBLIC_TRAILING_SLASH === "1";
+export const localePath: Record<Locale, string> = { bs: "/", en: slash ? "/en/" : "/en" };
 
 export function buildMetadata(locale: Locale): Metadata {
   const t = dictionaries[locale].meta;
@@ -24,7 +25,7 @@ export function buildMetadata(locale: Locale): Metadata {
     authors: [{ name: company.name }],
     alternates: {
       canonical: localePath[locale],
-      languages: { bs: "/", en: "/en", "x-default": "/" },
+      languages: { bs: "/", en: localePath.en, "x-default": "/" },
     },
     openGraph: {
       type: "website",
@@ -56,7 +57,7 @@ export function organizationJsonLd(locale: Locale) {
     name: company.name,
     alternateName: company.short,
     description: t.description,
-    url: locale === "bs" ? `${siteUrl}/` : `${siteUrl}/en`,
+    url: `${siteUrl}${localePath[locale]}`,
     logo: `${siteUrl}/brand/logo-black.png`,
     image: `${siteUrl}/og.jpg`,
     email: company.email,

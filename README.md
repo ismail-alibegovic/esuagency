@@ -39,3 +39,16 @@ The form posts to `/api/contact`.
 ## Images
 
 Photography sources and licences are listed in `public/images/CREDITS.md`.
+
+## cPanel / shared hosting (static version)
+
+```bash
+SITE_URL=https://esuagency.ba scripts/build-cpanel.sh
+```
+
+Creates `dist/esuagency-cpanel.zip` — plain HTML/CSS/JS for the cPanel `public_html` folder, plus:
+
+- `contact.php` — emails the contact form to `info@esuagency.ba` using the server's `mail()`.
+- `.htaccess` — caching, compression, security headers and the 404 page. Uncomment the HTTPS redirect once SSL is active.
+
+The Vercel/Node version (`npm run build`) is unchanged and keeps using `/api/contact`.

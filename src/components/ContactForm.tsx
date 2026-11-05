@@ -6,6 +6,8 @@ import { ArrowUpRight, ChevronDown } from "./icons";
 
 type Status = "idle" | "sending" | "success" | "fallback" | "error" | "invalid";
 
+const ENDPOINT = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || "/api/contact";
+
 const field =
   "w-full rounded-xl bg-white/[0.04] px-4 py-3.5 text-[14px] text-white placeholder:text-white/30 ring-1 ring-white/10 outline-none transition focus:bg-white/[0.07] focus:ring-white/40";
 
@@ -42,7 +44,7 @@ export default function ContactForm({ t, locale }: { t: Dictionary["contact"]["f
     setStatus("sending");
     setMsg("");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
