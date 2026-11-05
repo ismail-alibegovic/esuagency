@@ -17,6 +17,10 @@ NEXT_PUBLIC_CONTACT_ENDPOINT=/contact.php npx next build
 cp cpanel/contact.php out/contact.php
 cp cpanel/htaccess out/.htaccess
 
+# Web server must be able to read everything: files 644, folders 755 (some source files were 600)
+find out -type d -exec chmod 755 {} +
+find out -type f -exec chmod 644 {} +
+
 mkdir -p dist && rm -f dist/esuagency-cpanel.zip
 (cd out && zip -qr ../dist/esuagency-cpanel.zip . -x ".DS_Store")
 echo "Created dist/esuagency-cpanel.zip"
